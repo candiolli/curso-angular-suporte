@@ -5,8 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<script src="node_modules/angular/angular.js"></script>
     <script src="app.js"></script>
-	<script src="listaTelefonicaCtrl.js"></script>
-	<script src="formListaTelefonicaCtrl.js"></script>
+	<script src="ListaTelefonicaCtrl.js"></script>
+	<script src="FormTelefonicaCtrl.js"></script>
 </head>
 <body>
 	
@@ -35,28 +35,10 @@
 			</table>
 
 			<hr/>
-			<input class="form-control" type="text" ng-model="contato.nome" placeholder="Nome"/>
-			<input class="form-control" type="text" ng-model="contato.telefone" placeholder="Telefone"/>
-			<select class="form-control" ng-model="contato.operadora" 
-				ng-options="operadora.nome for operadora in operadoras">
-				<option value="">Selecione uma operadora</option>
-			</select>
-
-			<button class="btn btn-primary btn-block" 
-				ng-click="adicionarContato(contato)">Adicionar Contato</button>
-			<button class="btn btn-danger btn-block" 
-				ng-click="apagarContatos(contatos)" ng-if="isContatoSelecionado(contatos)">Apagar Contatos</button>
-			{{contato}}
-			<br>
-			{{contatos}}
+			
 		</div>
 		
     </div>
-
-	<div ng-controller="formListaTelefonicaCtrl">
-		--formListaTelefonicaCtrl
-		{{app}}
-	</div>
 	
 </body>
 </html>
