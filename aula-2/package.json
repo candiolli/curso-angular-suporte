@@ -10,6 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "angular": "^1.6.4",
-    "bootstrap": "^3.3.7"
+    "angular-animate": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "bootstrap": "^3.3.7",
+    "bower": "^1.8.0",
+    "express": "^4.15.3"
   }
 }
