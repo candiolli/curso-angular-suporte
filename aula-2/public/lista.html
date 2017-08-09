@@ -15,9 +15,9 @@
 			<tr ng-class="{'selecionado negrito': contato.selecionado}" 
 				ng-repeat="contato in contatos | limitTo : 3 : 0 | filter:criterioDeBusca">
 				<td><input type="checkbox" ng-model="contato.selecionado"/></td>
-				<td>{{contato.nome}}</td>
+				<td>{{contato.name}}</td>
 				<td>{{contato.telefone}}</td>
-				<td>{{contato.operadora.nome}}</td>
+				<td>{{contato.idOperadora}}</td>
 				<!--<td>{{contato.data | date:'dd/MM/yyyy HH:mm'}}</td>-->
 			</tr>
 		</table>

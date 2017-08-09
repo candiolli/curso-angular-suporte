@@ -4,7 +4,9 @@ app.controller("ListaTelefonicaCtrl", function ($scope, $rootScope, $http, Conta
     
     $scope.contato = {};
 
-    $scope.contatos = ContatoService.buscarTodos();
+    ContatoService.buscarTodos(function(data){
+        $scope.contatos = data.data;
+    });
 
     $scope.apagarContatos = function (contatos) {
         $scope.contatos = contatos.filter(function (contato) {
