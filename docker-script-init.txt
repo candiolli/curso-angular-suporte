@@ -1,0 +1,11 @@
+docker pull mongo
+docker run -p 27017:27017 --name db-treinamento -d mongo --auth
+docker exec -it db-treinamento mongo admin
+db.createUser({ user: 'suporte', pwd: '123456', roles: [ { role: "readWriteAnyDatabase", db: "admin" } ] });
+
+#Client Mongo https://robomongo.org/download
+#Dados conexão:
+#localhost:27017
+#user: suporte
+#senha: 123456
+#db: admin

@@ -13,18 +13,18 @@ import com.cursosuporte.listatelefonica.repository.OperadoraRepository;
 @RequestMapping("/api/operadora")
 public class OperadoraController {
 
-	@Autowired
-	private OperadoraRepository operadoraRepository;
-	
-	@CrossOrigin(origins = "http://localhost:8085")
+    @Autowired
+    private OperadoraRepository operadoraRepository;
+
+    @CrossOrigin(origins = "http://localhost:8085")
     @GetMapping("/buscarTodos")
-	public Iterable<Operadora> buscarTotos() {
-		return operadoraRepository.findAll();
-	}
-	
-	@CrossOrigin(origins = "http://localhost:8085")
+    public Iterable<Operadora> buscarTotos() {
+        return operadoraRepository.findAll();
+    }
+
+    @CrossOrigin(origins = "http://localhost:8085")
     @GetMapping("/buscarPorId")
-	public Operadora buscarPorId(@RequestParam(value="id") Long id) {
-		return operadoraRepository.findOne(id);
-	}
+    public Operadora buscarPorId(@RequestParam(value = "id") Long id) {
+        return operadoraRepository.findOne(id);
+    }
 }
